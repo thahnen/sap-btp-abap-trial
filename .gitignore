@@ -1,0 +1,12 @@
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# ABAP XML files
+*.apclass
+
+# SonarCloud
+.sonar-project.properties
+.scannerwork/
