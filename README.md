@@ -11,3 +11,12 @@ kann über das Kontext-Menu auf dem Object ausgeführt werden: *Export -> Genera
 
 Zum ausführen der Analyse mittels SonarCloud muss der folgende Befehl aufgerufen werden.
 > sonar-scanner -D$(cat .sonar-project.properties)
+
+## TODO: Locale Quelltexte mit SonarLint verbinden
+
+Als Cache scheint ADT for Eclipse die lokalen Quelltexte des Cloud-Projekts an einem Ordner im
+Workspace abzulegen. Der Pfad folgt wohl dem Schema:
+
+`${workspace_loc}/.metadata/.plugins/org.eclipse.core.resources.semantic/.cache/${eclipse_project_name}/.adt/classlib/classes/${abap_class_name}`
+
+Dies ist ein guter Einstieg für die Extension Points um die Datei, ähnlich der Integration in COBOL IDEs, zur Verfügung zu stellen.
