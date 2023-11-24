@@ -5,12 +5,20 @@ SAP BTP ABAP Environment Trial und keiner On-Premise SAP Installation.
 
 ## Export des ABAP Source Code
 
-[abapGit](https://github.com/abapGit/abapGit) kann leider nicht mit SAP BTP verwendet werden, da es
-die SAP GUI benötigt. Daher müssen ABAP-Objekte manuell aus Eclipse heraus exportiert werden. Das
-kann über das Kontext-Menu auf dem Object ausgeführt werden: *Export -> General/File System*
+Quelltexte können entweder per [abapGit](https://github.com/abapGit/abapGit) oder "manuell" (man
+kann sich das bestimmt auch automatisieren) exportiert werden. Bei der manuellen Exportierung muss
+aus Eclipse heraus per Kontext-Menu auf dem Objekt der Export angestossen werden:
+*Export -> General/File System*
 
 Zum ausführen der Analyse mittels SonarCloud muss der folgende Befehl aufgerufen werden.
 > sonar-scanner -D$(cat .sonar-project.properties)
+
+## abapGit "latest" Source Code
+
+Um den Quelltext von abapGit selbst zu analysieren (nur den ABAP-Teil), kann dieser mit dem letzten
+Build-Artefakt heruntergeladen werden:
+
+> mkdir abapGit && curl -L https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap > abapGit/zabapgit_standalone.prog.abap
 
 ## TODO: Locale Quelltexte mit SonarLint verbinden
 
