@@ -1,0 +1,3 @@
+FUNCTION-POOL Z_INVESTIGATION_GROUP.        "MESSAGE-ID ..
+
+* INCLUDE LZ_INVESTIGATION_GROUPD...         " Local class definition

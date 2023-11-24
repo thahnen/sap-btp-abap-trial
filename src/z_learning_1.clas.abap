@@ -1,0 +1,30 @@
+* Global Class
+
+CLASS z_learning_1 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    INTERFACES if_oo_adt_classrun.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+    METHODS:
+      sub_println
+        IMPORTING
+          io_out TYPE REF TO if_oo_adt_classrun_out.
+ENDCLASS.
+
+
+CLASS z_learning_1 IMPLEMENTATION.
+  METHOD if_oo_adt_classrun~main.
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Main method of the class z_learning_1
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    sub_println( out ).
+  ENDMETHOD.
+
+  METHOD sub_println.
+    io_out->write( 'Hello World' ).
+  ENDMETHOD.
+ENDCLASS.
